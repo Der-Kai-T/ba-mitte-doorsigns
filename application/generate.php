@@ -6,6 +6,8 @@ $number++;
 file_put_contents("counter.txt", $number);
 
 
+$hostname = $_SERVER['SERVER_NAME'];
+
 $json = $_POST['json'];
 
 
@@ -212,7 +214,7 @@ for($j =1; $j<= 2; $j++) {
 
     $pdf->SetFont("Arial", "", 10);
     $pdf->SetXY($left, $page_height - 10);
-    $pdf->Cell($box_width, 10 * $mm_per_pt, "Erzeugt mittels https://tuerschild.kai-thater.de", 0, 0, "C");
+    $pdf->Cell($box_width, 10 * $mm_per_pt, "created by Der-Kai-T/ba-mitte-doorsigns, hosted at " . $hostname, 0, 0, "C");
 
 }
 $pdf->Output();

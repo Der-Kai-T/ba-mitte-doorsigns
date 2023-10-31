@@ -108,6 +108,9 @@ function safe_browser(){
 
 function load_browser(){
     data = JSON.parse(localStorage.getItem("json"));
+    if(data === null){
+        data = [];
+    }
     $('#json').val(JSON.stringify(data));
 }
 
