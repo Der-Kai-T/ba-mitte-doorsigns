@@ -1,0 +1,19 @@
+body{
+    background-color: var(--bs-gray-500);
+}
+
+.card-body{
+    background-color: var(--bs-gray-400);
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+input:invalid{
+    border: 2px solid var(--bs-red);
+}
+
+input:valid{
+    border: 2px solid var(--bs-green);
+}
