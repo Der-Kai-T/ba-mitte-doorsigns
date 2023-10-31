@@ -4,6 +4,9 @@
         Türschilder BA Mitte
     </title>
 
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png">
+
     <!-- Bootstrap Framework -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <script src="assets/js/bootstrap.min.js"></script>

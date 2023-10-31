@@ -2,3 +2,5 @@
 .idea/sonarlint/issuestore
 
 .idea/sonarlint/securityhotspotstore/
+
+application/counter.txt
