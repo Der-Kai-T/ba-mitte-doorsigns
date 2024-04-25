@@ -213,8 +213,19 @@ for($j =1; $j<= 2; $j++) {
 
 
     $pdf->SetFont("Arial", "", 10);
-    $pdf->SetXY($left, $page_height - 10);
+    $pdf->SetXY($left, $page_height - 8);
     $pdf->Cell($box_width, 10 * $mm_per_pt, "created by Der-Kai-T/ba-mitte-doorsigns, hosted at " . $hostname, 0, 0, "C");
+    $pdf->SetXY($left, $page_height - 18);
+    $pdf->SetFont("Arial", "B", 12);
+    $pdf->SetTextColor(255,0,0);
+    $pdf->Cell($box_width, 10 * $mm_per_pt, utf8_decode("Achtung: Ausdruck muss in Originalgröße (100%) erfolgen. "), 0, 0, "C");
+    $pdf->SetXY($left, $page_height - 14);
+    $pdf->SetFont("Arial", "", 10);
+    $pdf->SetTextColor(0,0,0);
+    $pdf->Cell($box_width, 10 * $mm_per_pt, utf8_decode("Dazu das Dokument in einem PDF-Programm (nicht im Browser) öffnen, z.B. Adobe Acrobat oder PDF24 "), 0, 0, "C");
+
+
+
 
 }
 $pdf->Output();
