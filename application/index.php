@@ -139,6 +139,13 @@
                             <form action="generate.php" method="POST">
                                 <textarea name="json" id="json" class="form-control" style="font-family: monospace"></textarea>
 
+                                <label class="col-form-label" for="sign_type">Art des Türschildes</label>
+                                <select class="form-control" required id="sign_type" name="sign_type">
+                                    <option selected disabled value="">bitte ein Design auswählen</option>
+                                    <option value="square">Quadratische Türschilder</option>
+                                    <option value="rect">Rechteckige Türschilder</option>
+                                </select>
+
                                 <button type="submit" class="btn btn-primary mt-3"><span
                                             class="fa-solid fa-file-pdf"></span><span class="p-3">PDF erzeugen</span></button>
 
@@ -158,11 +165,11 @@
                             Feldinhalt nicht leeren
                         </div>
                         <div class="card-body">
-                            <input type="checkbox" class="form-check-input mr-2" id="authority_checkbox" checked><label for="room_checkbox" class="form-check-label ml-2">Behörde</label><br>
+                            <input type="checkbox" class="form-check-input mr-2" id="authority_checkbox" checked><label for="authority_checkbox" class="form-check-label ml-2">Behörde</label><br>
                             <input type="checkbox" class="form-check-input mr-2" id="room_checkbox"><label for="room_checkbox" class="form-check-label ml-2">Raum</label><br>
-                            <input type="checkbox" class="form-check-input mr-2" id="department_checkbox" checked><label for="room_checkbox" class="form-check-label ml-2">Fachamt</label><br>
-                            <input type="checkbox" class="form-check-input mr-2" id="section_number_checkbox"><label for="room_checkbox" class="form-check-label ml-2">Leitzeichen Abteilung / Abschnitt</label><br>
-                            <input type="checkbox" class="form-check-input mr-2" id="section_name_checkbox"><label for="room_checkbox" class="form-check-label ml-2">Name Abteilung / Abschnitt</label><br>
+                            <input type="checkbox" class="form-check-input mr-2" id="department_checkbox" checked><label for="department_checkbox" class="form-check-label ml-2">Fachamt</label><br>
+                            <input type="checkbox" class="form-check-input mr-2" id="section_number_checkbox"><label for="section_number_checkbox" class="form-check-label ml-2">Leitzeichen Abteilung / Abschnitt</label><br>
+                            <input type="checkbox" class="form-check-input mr-2" id="section_name_checkbox"><label for="section_name_checkbox" class="form-check-label ml-2">Name Abteilung / Abschnitt</label><br>
                         </div>
                     </div>
                 </div>
@@ -179,10 +186,10 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    Symbolbild
+                    Symbolbild Quadratisches Türschild
                 </div>
                 <div class="card-body">
-                    <img src="assets/img/template.png"
+                    <img src="assets/img/template_square.png"
                          class="img-fluid"
                          alt="Darstellung der Felder">
 
@@ -191,34 +198,23 @@
         </div>
     </div>
 
-    <div class="row">
+
+    <div class="row mt-3">
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Informationen <span class="fa-solid fa-caret-down pointer" id="info_caret"
-                                                               onclick="toggle_card_body('info_body', 'info_caret')"></span>
-                    </h3>
+                    Symbolbild rechteckiges Türschild
                 </div>
-                <div class="card-body" id="info_body" style="display:none">
-                    <p>Mithilfe dieser Webanwendung können Türschilder für die Büros im (angemieteten) D-Flur des
-                        Bezirksamtsgebäudes in der Caffamacherreihe 1-3 erstellt werden.</p>
+                <div class="card-body">
+                    <img src="assets/img/template_rect.png"
+                         class="img-fluid"
+                         alt="Darstellung der Felder">
 
-                    <p>
-                        Aktuell steht nur das Logo des Bezirksamtes zur Verfügung. Weitere Logos können an
-                        <a href="mailto:dev@kai-thater.de?subject=Logo%20Türschilder">dev@kai-thater.de</a>
-                        gesendet werden.
-
-                    </p>
-                    <p>Anforderungen an die Datei</p>
-                    <ul>
-                        <li> Dateiformat .png mit transparentem Hintergrund</li>
-                        <li> Auflösung 300dpi</li>
-                        <li> Maße: 70mm breit, 25mm hoch (inkl. Logoschutzzonen)</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </div>
+
 
 
     <div class="row mt-3 mb-4">

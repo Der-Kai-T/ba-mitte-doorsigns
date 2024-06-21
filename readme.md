@@ -6,6 +6,8 @@ in der Sprache PHP 8+ um Türschilder im FHH-Design zu erzeugen.
 Entstanden ist sie im Rahmen des Umzuges einer Abteilung in einen neuen Flur, 
 in dem nur "einfache" Türschilder im Maß 175 x 175 mm vorhanden waren.
 
+Es können in Version 1.2 auch Türschilder für die Rahmen von Modulex (Einleger Paperflex 15,7 x 9,3 cm) auf Standardpapier gedruckt werden
+
 Eine lauffähige Version wird zum Zeitpunkt des Commits unter https://tuerschilder.kai-thater.de zur Verfügung gestellt. 
 
 
