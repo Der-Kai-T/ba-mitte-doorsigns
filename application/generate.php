@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_DEPRECATED);
 
 //load counter file and increment one
 $number = file_get_contents("counter.txt");
@@ -21,6 +22,7 @@ $object = json_decode($json);
 $type = $_POST["sign_type"];
 
 require_once "assets/fpdf/fpdf.php";
+
 
 
 /* Setup */

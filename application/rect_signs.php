@@ -1,5 +1,6 @@
 <?php
 
+$version = "Version 2";
 
 /* Setup */
 $mm_per_pt			= 0.352778;
@@ -45,7 +46,7 @@ $authority_logo_left   = 117;
 $authority_logo_top    = 69;
 
 $room_top = 0;
-$room_font_size = 10;
+$room_font_size = 6;
 $room_font_type = "";
 
 
@@ -68,7 +69,7 @@ $section_right = $box_width-$box_padding;
 $section_number_font_size = 18;
 $section_number_font_type = "B";
 $section_font_size = 18;
-$section_font_type = "";
+$section_font_type = "B";
 
 
 
@@ -143,13 +144,13 @@ foreach ($object as $sign) {
     $color = $color_dark_blue;
     $pdf->SetFont("HamburgSans", $department_font_type, $department_font_size);
     $pdf->SetTextColor($color[0], $color[1], $color[2]);
-    $y = $top + $line_department_above + ($line_department_below - $line_department_above) /4;
+    $y = ($top + $line_department_above + ($line_department_below - $line_department_above) /4)-1;
     $pdf->SetXY($left + $box_padding, $y );
     $pdf->Cell($box_width - $box_padding * 2, $department_font_size * $mm_per_pt, utf8_decode($sign->department), 0, 0, "L");
 
     $pdf->SetFont("HamburgSans", $section_font_type, $section_font_size);
     $pdf->SetTextColor($color[0], $color[1], $color[2]);
-    $y = $top + $line_department_below - $section_font_size * $mm_per_pt - ( $line_department_below - $line_department_above) /6;
+    $y = ($top + $line_department_below - $section_font_size * $mm_per_pt - ( $line_department_below - $line_department_above) /6) + 1;
     $pdf->SetXY($left + $box_padding, $y);
     $pdf->Cell($box_width - $box_padding * 2, $section_font_size * $mm_per_pt, utf8_decode($sign->section_name), 0, 0, "L");
 
@@ -190,13 +191,13 @@ foreach ($object as $sign) {
     //Notes
 
         $pdf->SetFont("Arial", "", 10);
-        $pdf->SetXY($left, $page_height - 5);
-        $pdf->Cell($box_width, 10 * $mm_per_pt, "created by Der-Kai-T/ba-mitte-doorsigns, hosted at " . $hostname, 0, 0, "C");
-        $pdf->SetXY($left, $page_height - 18);
+        $pdf->SetXY($left, $page_height - 15);
+        $pdf->Cell($box_width, 10 * $mm_per_pt, "created by Der-Kai-T/ba-mitte-doorsigns  $version, hosted at " . $hostname, 0, 0, "C");
+        $pdf->SetXY($left, $page_height - 30);
         $pdf->SetFont("Arial", "B", 14);
         $pdf->SetTextColor(255,0,0);
         $pdf->Cell($box_width, 10 * $mm_per_pt, utf8_decode("Achtung: Ausdruck muss in Originalgröße (100%) erfolgen. "), 0, 0, "C");
-        $pdf->SetXY($left, $page_height - 14);
+        $pdf->SetXY($left, $page_height - 26);
         $pdf->SetFont("Arial", "", 10);
         $pdf->SetTextColor(0,0,0);
         $pdf->Cell($box_width, 10 * $mm_per_pt, utf8_decode("Dazu das Dokument in einem PDF-Programm (nicht im Browser) öffnen,"), 0, 1, "C");
